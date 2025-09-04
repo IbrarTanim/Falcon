@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorLightGray">#e7e7e7</color>
+    <color name="colorDarkGray">#bab5b5</color>
+    <color name="colorLightPink">#FE8A87</color>
+    <color name="colorDarkPink">#ff7472</color>
+    <color name="colorTextBlack">#4d4d4d</color>
+    <color name="colorToastBg">#8F8F8F</color>
+    <color name="colorError">#AA0000</color>
+    <color name="colorSuccess">#3ca751</color>
+    <color name="colorWarning">#edb151</color>
+    <color name="colorInfo">#979eff</color>
+    <color name="colorPinkBorder">#fdd8d8</color>
+
+    <color name="colorTextGray">#878787</color>
+    <color name="colorTextBlackSecondary">#747474</color>
+    <color name="colorPinkDisabled">#f9bcba</color>
+
+    <color name="textBlackRegular">#161616</color>
+    <color name="textPinkLight">#fcb7b7</color>
+    <color name="textBlackLight">#949494</color>
+
+    <color name="textPinkDark">#ff6562</color>
+
+    <color name="colorAccent">#ff706e</color>
+
+    <color name="textBlackDark">#000000</color>
+    <color name="colorDialogBackground">#77ffffff</color>
+    <color name="colorBadgePink">#feefef</color>
+    <color name="opsGray">#d4d3d3</color>
+    <color name="dimBgColor">#d6d6d6</color>
+
+
+
+</resources>

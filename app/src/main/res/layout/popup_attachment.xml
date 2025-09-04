@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/dimView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@color/dimBgColor"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/dialogView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_dialog_box_new"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingEnd="28dp"
+        android:paddingStart="28dp"
+        android:paddingTop="22dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tvHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Attachment"
+            android:textAlignment="center"
+            android:textColor="@color/textBlackRegular"
+            android:textSize="@dimen/textLarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:fadeScrollbars="true"
+            android:fillViewport="true"
+            android:maxHeight="250dp"
+            android:minHeight="70dp"
+            android:scrollbarSize="2dp"
+            android:scrollbarThumbVertical="@color/textPinkLight">
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/hr"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPinkBorder" />
+
+        <TextView
+            android:id="@+id/btnGotIt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/colorWhite"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Close"
+            android:textColor="@color/textPinkDark"
+            android:textSize="@dimen/textNormal" />
+    </LinearLayout>
+</RelativeLayout>

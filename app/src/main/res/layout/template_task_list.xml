@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/taskBox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="4dp"
+    android:layout_marginStart="4dp"
+    android:background="@drawable/bg_task_details_segment">
+
+
+    <TextView
+        android:id="@+id/tvCreatedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_thin"
+        android:text="10:01 am"
+        android:textColor="@color/textBlackRegular"
+        android:textSize="@dimen/text_x_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTaskIdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto"
+        android:text="Task Id:"
+        android:textColor="@color/textBlackRegular"
+        android:textSize="@dimen/textSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTaskId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_badge_pink_light"
+        android:fontFamily="@font/roboto"
+        android:text="#20145852"
+        android:textColor="@color/textPinkDark"
+        android:textSize="@dimen/textSmall"
+        app:layout_constraintBottom_toTopOf="@+id/tvTaskIdLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvTaskIdLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTaskIdLabel" />
+
+    <TextView
+        android:id="@+id/tvTaskTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Collect users feedback from Gulshan area and send as soon as possible."
+        android:textColor="@color/textBlackRegular"
+        android:textSize="@dimen/textSmall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTaskId" />
+
+
+    <TextView
+        android:id="@+id/tvTaskType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_badge_pink_light"
+        android:fontFamily="@font/roboto"
+        android:text="Individual"
+        android:textAlignment="center"
+        android:textColor="@color/textPinkDark"
+        android:textSize="@dimen/text_x_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTaskTitle" />
+
+    <TextView
+        android:id="@+id/tvTaskStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_badge_pink_light"
+        android:fontFamily="@font/roboto"
+        android:text="In progress"
+        android:textAlignment="center"
+        android:textColor="@color/textPinkDark"
+        android:textSize="@dimen/text_x_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvTaskType"
+        app:layout_constraintTop_toBottomOf="@+id/tvTaskTitle"
+        app:layout_constraintVertical_bias="0.25" />
+</android.support.constraint.ConstraintLayout>

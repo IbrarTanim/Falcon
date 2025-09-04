@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "621811566665",
+    "firebase_url": "https://thirdeye-c633c.firebaseio.com",
+    "project_id": "thirdeye-c633c",
+    "storage_bucket": "thirdeye-c633c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621811566665:android:680a18be9e75f8b0",
+        "android_client_info": {
+          "package_name": "com.teknopole.track3rdeye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621811566665-7ngkgkrkch0len7ikjmue7vda8pf0ig2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.teknopole.track3rdeye",
+            "certificate_hash": "6b2df3998b204d7044d693654b7d0e7a927b1605"
+          }
+        },
+        {
+          "client_id": "621811566665-rk66cejpov3urrqaijrogora43c7jrk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqUEc4wwAB9qK3d9zBzuUWi8yF6rKJ5Uc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621811566665-rk66cejpov3urrqaijrogora43c7jrk6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

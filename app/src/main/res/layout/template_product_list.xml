@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/taskBox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp">
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_thin"
+        android:textColor="@color/textBlackRegular"
+        android:textSize="@dimen/text_x_small"
+        android:src="@drawable/ic_delete"
+        android:tint="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto"
+        android:text="Product Id:"
+        android:background="@drawable/bg_badge_pink_light"
+        android:textColor="@color/textBlackRegular"
+        android:textSize="@dimen/textSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProductCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+
+        android:fontFamily="@font/roboto"
+        android:text="#20145852"
+        android:textColor="@color/textPinkDark"
+        android:textSize="@dimen/textSmall"
+        app:layout_constraintBottom_toTopOf="@+id/tvProductName"
+        app:layout_constraintStart_toEndOf="@+id/tvProductName"
+        app:layout_constraintTop_toBottomOf="@+id/tvProductName" />
+
+    <LinearLayout
+        android:id="@+id/labelBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:paddingTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvProductCode"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/textPinkDark"
+            android:background="@drawable/bg_badge_pink_light"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:text="Price" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/textPinkDark"
+            android:background="@drawable/bg_badge_pink_light"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:text="Quantity" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/textPinkDark"
+            android:background="@drawable/bg_badge_pink_light"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:text="Stock" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/textPinkDark"
+            android:background="@drawable/bg_badge_pink_light"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:text="Amount" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelBox"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/cell_shape_content"
+            android:textAlignment="center"
+            android:textColor="@color/textPinkDark"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/tvQuantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:background="@drawable/cell_shape_content"
+            android:textAlignment="center"
+            android:textColor="@color/textPinkDark"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvStock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/cell_shape_content"
+            android:textAlignment="center"
+            android:textColor="@color/textPinkDark"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/cell_shape_content"
+            android:textAlignment="center"
+            android:textColor="@color/textPinkDark"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

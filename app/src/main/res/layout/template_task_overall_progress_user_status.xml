@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/topSeparator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorPinkBorder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfilePic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:src="@color/colorWhite"
+        app:civ_border_color="@color/colorPinkBorder"
+        app:civ_border_width="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/frameLayout5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topSeparator" />
+
+    <TextView
+        android:id="@+id/tvFullName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Mr. Abdur Rahim"
+        android:textColor="@color/textPinkDark"
+        android:textSize="@dimen/text_x_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivProfilePic"
+        app:layout_constraintTop_toBottomOf="@id/topSeparator" />
+
+    <TextView
+        android:id="@+id/tvDesignation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Executive"
+        android:textColor="@color/textBlackLight"
+        android:textSize="@dimen/text_xx_small"
+        app:layout_constraintStart_toEndOf="@+id/ivProfilePic"
+        app:layout_constraintTop_toBottomOf="@+id/tvFullName" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout5"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPinkBorder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfilePic" />
+
+    <TextView
+        android:id="@+id/tvActiveRemoveStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/bg_badge_red"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingBottom="1dp"
+        android:paddingEnd="6dp"
+        android:paddingStart="6dp"
+        android:paddingTop="0dp"
+        android:text="Blocked"
+        android:textColor="@color/colorWhite"
+        android:textSize="9sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout5"
+        app:layout_constraintStart_toEndOf="@+id/ivProfilePic"
+        app:layout_constraintTop_toBottomOf="@+id/tvDesignation" />
+
+    <TextView
+        android:id="@+id/tvSecondaryStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="1dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Marked as complete by admin"
+        android:textColor="@color/textBlackLight"
+        android:textSize="9sp"
+        android:textStyle="italic"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout5"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_badge_pink_light"
+        android:fontFamily="@font/roboto_light"
+        android:paddingBottom="1dp"
+        android:paddingEnd="6dp"
+        android:paddingStart="6dp"
+        android:paddingTop="0dp"
+        android:text="In-Progress"
+        android:textColor="@color/textPinkDark"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvSecondaryStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_goneMarginBottom="4dp" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/taskBox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="4dp"
+    android:layout_marginStart="4dp"
+    android:background="@drawable/bg_task_details_segment">
+
+    <TextView
+        android:id="@+id/tvDealerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_badge_pink_light"
+        android:fontFamily="@font/roboto"
+        android:text="Akhter Furniture"
+        android:textColor="@color/textPinkDark"
+        android:textSize="@dimen/textSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDealerMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_badge_pink_light"
+        android:fontFamily="@font/roboto"
+        android:text="123123"
+        android:textAlignment="center"
+        android:textColor="@color/textPinkDark"
+        android:textSize="@dimen/text_x_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvDealerPhone"
+        app:layout_constraintTop_toBottomOf="@+id/tvDealerName" />
+
+    <TextView
+        android:id="@+id/tvDealerPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_badge_pink_light"
+        android:fontFamily="@font/roboto"
+        android:text="123441"
+        android:textAlignment="center"
+        android:textColor="@color/textPinkDark"
+        android:textSize="@dimen/text_x_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDealerName" />
+
+    <TextView
+        android:id="@+id/tvDealerAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Collect users feedback from Gulshan area and send as soon as possible."
+        android:textColor="@color/textBlackRegular"
+        android:textSize="@dimen/textSmall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDealerMobile" />
+</android.support.constraint.ConstraintLayout>

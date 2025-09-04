@@ -1,0 +1,191 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true">
+
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--************************** body ********************************-->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbarThumbVertical="@null"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBack">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:id="@+id/tvDealerLabel"
+                android:layout_width="37dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Dealer"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_x_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hr" />
+
+            <AutoCompleteTextView
+                android:id="@+id/etDealer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit_text"
+                android:completionThreshold="1"
+                android:enabled="true"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="@dimen/textNormal"
+                app:layout_constraintEnd_toStartOf="@+id/btnDealerInfo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDealerLabel" />
+
+            <TextView
+                android:id="@+id/tvProductLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/roboto"
+                android:text="Products"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_x_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvDealerLabel"
+                app:layout_constraintTop_toBottomOf="@+id/etDealer" />
+
+            <AutoCompleteTextView
+                android:id="@+id/etProduct"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_edit_text"
+                android:completionThreshold="1"
+                android:enabled="true"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="@dimen/textNormal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvDealerLabel"
+                app:layout_constraintTop_toBottomOf="@+id/tvProductLabel" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="4dp"
+                android:paddingEnd="0dp"
+                android:paddingStart="0dp"
+                android:paddingTop="1dp"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvDealerLabel"
+                app:layout_constraintTop_toBottomOf="@+id/etProduct" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/cell_shape_header"
+                android:text="Grand Total"
+                app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+                app:layout_constraintEnd_toStartOf="@+id/etGrandTotal"
+                app:layout_constraintHorizontal_bias="0.97"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvProduct"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/etGrandTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:minWidth="100dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/cell_shape_content"
+                android:enabled="true"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:text=""
+                android:textColor="@color/colorTextBlack"
+                android:textSize="@dimen/textNormal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvProduct"
+                tools:text="100" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="64dp"
+                android:background="@drawable/bg_shadow_btn"
+                android:stateListAnimator="@null"
+                android:text="Add"
+                android:textColor="@color/colorLightPink"
+                android:textSize="@dimen/textLarge"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etGrandTotal" />
+
+            <ImageButton
+                android:id="@+id/btnDealerInfo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="?selectableItemBackground"
+                android:tint="?colorAccent"
+                app:layout_constraintBottom_toBottomOf="@+id/etDealer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etDealer"
+                app:srcCompat="@drawable/ic_info_outline_black_24dp" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

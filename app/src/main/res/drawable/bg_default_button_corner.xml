@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector android:color="@color/colorWhite" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true">
+        <ripple android:color="@color/colorWhite" xmlns:android="http://schemas.android.com/apk/res/android">
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/colorDarkPink"/>
+                </shape>
+            </item>
+        </ripple>
+    </item>
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorPinkDisabled"/>
+        </shape>
+    </item>
+</selector>

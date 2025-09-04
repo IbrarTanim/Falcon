@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+    <!--android:id="@+id/ivProfilePic"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_marginBottom="4dp"-->
+    <!--android:layout_marginStart="4dp"-->
+    <!--android:layout_marginTop="4dp"-->
+    <!--android:background="@color/colorWhite"-->
+    <!--android:src="@drawable/avatar"-->
+    <!--app:civ_border_color="@color/colorPinkBorder"-->
+    <!--app:civ_border_width="1dp" />-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTaskTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:drawableStart="@drawable/ic_directions_run"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Meet with Mr. Rouf"
+            android:textColor="@color/colorDarkPink"
+            android:textSize="@dimen/textNormal" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="2dp"
+            android:drawablePadding="2dp"
+            android:drawableStart="@drawable/ic_chat_small"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="House 31, Road 24/30, Level 9. Gulshan 1. Dhaka 1217"
+            android:textColor="@color/colorTextBlackSecondary"
+            android:textSize="@dimen/text_x_small" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="2dp"
+            android:drawablePadding="2dp"
+            android:drawableStart="@drawable/ic_alarm_small"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="20 july 2018 , 10:00 am"
+            android:textColor="@color/colorTextBlackSecondary"
+            android:textSize="@dimen/text_x_small" />
+    </LinearLayout>
+</LinearLayout>

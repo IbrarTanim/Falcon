@@ -1,0 +1,445 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true">
+
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Details"
+        android:textColor="#000"
+        android:textSize="@dimen/textLarge"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+    <!--************************** body ********************************-->
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:refreshColor="@color/colorLightPink"
+        app:refreshType="material">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/contentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--task segment-->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/taskBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/bg_task_details_segment"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Task"
+                    android:textColor="@color/colorDarkPink"
+                    android:textSize="@dimen/textLarge"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvCreatedTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/roboto_thin"
+                    android:text="--:-- --"
+                    android:textColor="@color/textBlackRegular"
+                    android:textSize="@dimen/text_x_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTaskIdLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Task Id:"
+                    android:textColor="@color/textBlackRegular"
+                    android:textSize="@dimen/textSmall"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <TextView
+                    android:id="@+id/tvTaskId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_badge_pink_light"
+                    android:fontFamily="@font/roboto"
+                    android:text="#_________"
+                    android:textColor="@color/textPinkDark"
+                    android:textSize="@dimen/textSmall"
+                    app:layout_constraintBottom_toTopOf="@+id/tvTaskIdLabel"
+                    app:layout_constraintStart_toEndOf="@+id/tvTaskIdLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTaskIdLabel" />
+
+                <TextView
+                    android:id="@+id/tvTaskTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="--------------------------------------------------------------"
+                    android:textColor="@color/textBlackRegular"
+                    android:textSize="@dimen/textSmall"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTaskId" />
+
+                <TextView
+                    android:id="@+id/tvAttachment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_badge_red"
+                    android:clickable="true"
+                    android:fontFamily="@font/roboto"
+                    android:text="0 Attachment"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_x_small"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTaskTitle" />
+
+                <TextView
+                    android:id="@+id/tvGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_badge_red"
+                    android:clickable="true"
+                    android:fontFamily="@font/roboto"
+                    android:text="Group"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_x_small"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvAttachment"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTaskTitle" />
+
+                <TextView
+                    android:id="@+id/tvIndividual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_badge_pink_light"
+                    android:fontFamily="@font/roboto"
+                    android:text="Individual"
+                    android:textAlignment="center"
+                    android:textColor="@color/textPinkDark"
+                    android:textSize="@dimen/text_x_small"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvGroup"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTaskTitle" />
+
+                <TextView
+                    android:id="@+id/tvTaskStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_badge_pink_light"
+                    android:fontFamily="@font/roboto"
+                    android:text="--------------"
+                    android:textAlignment="center"
+                    android:textColor="@color/textPinkDark"
+                    android:textSize="@dimen/text_x_small"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvIndividual"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTaskTitle"
+                    app:layout_constraintVertical_bias="0.25" />
+            </android.support.constraint.ConstraintLayout>
+            <!--deadline segment-->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/deadlineBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/bg_task_details_segment"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/taskBox">
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Deadline"
+                    android:textColor="@color/colorDarkPink"
+                    android:textSize="@dimen/textLarge"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTaskTitle2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawablePadding="2dp"
+                    android:drawableStart="@drawable/ic_date_range_for_badge"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="Starts on"
+                    android:textColor="@color/textBlackRegular"
+                    android:textSize="@dimen/text_xx_small"
+                    app:layout_constraintStart_toStartOf="@+id/tvStartTime"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                <TextView
+                    android:id="@+id/tvTaskTitle3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawablePadding="2dp"
+                    android:drawableStart="@drawable/ic_date_range_for_badge"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="Ends on"
+                    android:textColor="@color/textBlackRegular"
+                    android:textSize="@dimen/text_xx_small"
+                    app:layout_constraintStart_toStartOf="@+id/tvEndTime"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                <TextView
+                    android:id="@+id/tvStartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/bg_badge_pink_light"
+                    android:fontFamily="@font/roboto"
+                    android:text="-- ---, ---- --:-- --"
+                    android:textAlignment="center"
+                    android:textColor="@color/textPinkDark"
+                    android:textSize="@dimen/text_x_small"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTaskTitle2" />
+
+                <TextView
+                    android:id="@+id/tvEndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/bg_badge_pink_light"
+                    android:fontFamily="@font/roboto"
+                    android:text="-- ---, ---- --:-- --"
+                    android:textAlignment="center"
+                    android:textColor="@color/textPinkDark"
+                    android:textSize="@dimen/text_x_small"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvStartTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTaskTitle2" />
+            </android.support.constraint.ConstraintLayout>
+            <!--location segment-->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/locationBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/bg_task_details_segment"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/deadlineBox">
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Location"
+                    android:textColor="@color/colorDarkPink"
+                    android:textSize="@dimen/textLarge"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSeeOnMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/bg_badge_red"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_pin_drop_for_badge"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="See on map"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_x_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvLocationText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:drawablePadding="2dp"
+                    android:drawableStart="@drawable/ic_flag_for_badge"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="----, -------------------, -------------"
+                    android:textColor="@color/textBlackRegular"
+                    android:textSize="@dimen/text_xx_small"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
+            </android.support.constraint.ConstraintLayout>
+            <!--details segment-->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/detailsBox"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/bg_task_details_segment"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationBox">
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Description"
+                    android:textColor="@color/colorDarkPink"
+                    android:textSize="@dimen/textLarge"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--<Button-->
+                <!--android:id="@+id/btnSendFile"-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_marginBottom="3dp"-->
+                <!--android:layout_marginEnd="4dp"-->
+                <!--android:layout_marginTop="3dp"-->
+                <!--android:background="@drawable/ic_edit_button"-->
+                <!--app:layout_constraintBottom_toBottomOf="@+id/textView22"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fadeScrollbars="true"
+                    android:scrollbarSize="2dp"
+                    android:scrollbarThumbVertical="@color/textPinkLight"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22">
+
+                    <LinearLayout
+                        android:id="@+id/descriptionContainerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </ScrollView>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/bg_default_button"
+                android:enabled="true"
+                android:focusable="false"
+                android:stateListAnimator="@null"
+                android:text="Start this task"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textNormal"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <include
+                android:id="@+id/OperationStatusView"
+                layout="@layout/operation_status_view"
+                android:visibility="gone" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.constraint.ConstraintLayout>

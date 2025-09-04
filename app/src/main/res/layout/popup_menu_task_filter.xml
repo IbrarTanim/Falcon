@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shadow_box_dialog_bg"
+    android:paddingBottom="24dp"
+    android:paddingEnd="24dp"
+    android:paddingStart="24dp"
+    android:paddingTop="24dp">
+
+    <Button
+        android:id="@+id/btnDateRangeSelector"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_btn_date_range_picker"
+        android:drawableEnd="@drawable/ic_event_note_small"
+        android:fontFamily="@font/roboto"
+        android:gravity="center_vertical"
+        android:stateListAnimator="@null"
+        android:text="20 jul, 18 - 22 jul, 18"
+        android:textAllCaps="false"
+        android:textColor="@color/colorLightPink"
+        android:textSize="@dimen/textSmall"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/roboto"
+        android:text="FILTER BY"
+        android:textColor="@color/colorLightPink"
+        android:textSize="@dimen/textNormal"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDateRangeSelector"
+        app:layout_goneMarginTop="8dp" />
+
+
+    <RadioGroup
+        android:id="@+id/rdoGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView16">
+
+        <RadioButton
+            android:id="@+id/rbAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorLightPink"
+            android:fontFamily="@font/roboto"
+            android:text="All"
+            android:textColor="@color/colorLightPink"
+            android:textSize="@dimen/textNormal" />
+
+        <RadioButton
+            android:id="@+id/rbAssigned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorLightPink"
+            android:fontFamily="@font/roboto"
+            android:text="Assigned"
+            android:textColor="@color/colorLightPink"
+            android:textSize="@dimen/textNormal" />
+
+        <RadioButton
+            android:id="@+id/rbInProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorLightPink"
+            android:fontFamily="@font/roboto"
+            android:text="In-Progress"
+            android:textColor="@color/colorLightPink"
+            android:textSize="@dimen/textNormal" />
+
+        <RadioButton
+            android:id="@+id/rbComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorLightPink"
+            android:fontFamily="@font/roboto"
+            android:text="Complete"
+            android:textColor="@color/colorLightPink"
+            android:textSize="@dimen/textNormal" />
+
+        <!--<view-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:layout_marginBottom="12dp"-->
+        <!--android:background="@color/colorPinkBorder" />-->
+
+        <RadioButton
+            android:id="@+id/rbGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorLightPink"
+            android:fontFamily="@font/roboto"
+            android:text="Group"
+            android:textColor="@color/colorLightPink"
+            android:textSize="@dimen/textNormal" />
+
+        <RadioButton
+            android:id="@+id/rdIndividual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorLightPink"
+            android:fontFamily="@font/roboto"
+            android:text="Individual"
+            android:textColor="@color/colorLightPink"
+            android:textSize="@dimen/textNormal" />
+    </RadioGroup>
+</android.support.constraint.ConstraintLayout>
